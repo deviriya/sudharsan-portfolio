@@ -5,7 +5,7 @@ import { Spotlight } from '../animation/spotLight';
 import { Download, Linkedin, Mail } from 'lucide-react';
 import Aos from 'aos';
 import { BounceInDownButton } from '../animation/bounceIn';
-import profile from '../assets/profile1.png'
+import profile from '../assets/profile2.png'
 
 function Introduction() {
     const words = [
@@ -32,14 +32,14 @@ function Introduction() {
     }, [])
 
     return (
-        <section className='md:h-screen flex justify-start items-center'>
+        <section className='md:min-h-screen flex justify-start items-center'>
             <Spotlight
                 className="top-40 left-0 md:left-60 md:top-20"
                 fill="pink"
             />
             <Grid container spacing={2} className='items-center'>
                 <Grid item md={7}>
-                    <div className='text-2xl md:text-4xl mt-28 md:mt-0 font-semibold mb-8'>
+                    <div className='text-2xl md:text-4xl font-semibold mb-8'>
                         <p className='mb-2'>Hey there, i'm</p>
                         <BounceInDownButton>
                             <h2 className='text-4xl md:text-6xl font-bold mb-2'>SUDHARSAN</h2>
@@ -71,13 +71,12 @@ function Introduction() {
                             </a>
                         </div>
 
-                        <a href="#" className="inline-flex items-center px-4 py-2 text-sm font-medium text-pink-600 dark:bg-[#0b0b0b] dark:border-none border rounded-md  dark:hover:bg-pink-600 hover:bg-pink-600 hover:text-white duration-300 focus:ring-0 focus:outline-none focus:ring-gray-100 dark:focus:text-pink-600" data-aos="fade-left" data-aos-duration="200" data-aos-delay="400">
+                        <a href="https://sudharsan-resume.tiiny.site/" target='_blank' className="inline-flex items-center px-4 py-2 text-sm font-medium text-pink-600 dark:bg-[#0b0b0b] dark:border-none border rounded-md  dark:hover:bg-pink-600 hover:bg-pink-600 hover:text-white duration-300 focus:ring-0 focus:outline-none focus:ring-gray-100 dark:focus:text-pink-600" data-aos="fade-left" data-aos-duration="200" data-aos-delay="400">
                             <Download size={16} className='me-1' /> Download CV</a>
                     </div>
                 </Grid>
-                <Grid item md={5}>
-                <img src={profile}
-                    className='img-fluid dark:opacity-50' />
+                <Grid item md={5} className='hidden md:block'>
+                    <img src={profile} className='img-fluid' alt='profile' />
                 </Grid>
             </Grid>
         </section>

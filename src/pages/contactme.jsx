@@ -1,7 +1,7 @@
 import React from 'react'
 import { BounceInDownButton } from '../animation/bounceIn'
-import { Grid, TextField, Tooltip } from '@mui/material'
-import { Instagram, Mail, MapPin, Phone, User } from 'lucide-react';
+import { Grid, TextField } from '@mui/material'
+import { Mail, User } from 'lucide-react';
 import { Button } from '../components/ui/button'
 import Lottie from 'lottie-react';
 import Globe from '../animation/Globe.json';
@@ -10,8 +10,8 @@ import Globe from '../animation/Globe.json';
 function Contactme() {
     return (
         <div className='m-8 md:my-12'>
-            <Grid container spacing={2} className='items-center'>
-                <Grid item md={6}>
+            <div className='md:flex gap-2 items-center'>
+                <div className='flex-1' item md={5}>
                     <p className='dark:text-white opacity-60 text-xs md:text-sm'>Free for chit chat?</p>
                     <BounceInDownButton>
                         <p className='text-pink-600 font-bold mb-4 text-2xl md:text-4xl'>Contact me</p>
@@ -46,7 +46,7 @@ function Contactme() {
                                 // Root class for the input field
                                 "& .MuiOutlinedInput-root": {
                                     color: "#94a3b8",
-                                    fontSize:"13px",
+                                    fontSize: "13px",
                                     // Class for the border around the input field
                                     "& .MuiOutlinedInput-notchedOutline": {
                                         borderColor: "#1e1e1e",
@@ -71,12 +71,11 @@ function Contactme() {
                             Submit
                         </Button>
                     </form>
-
-                </Grid>
-                <Grid item md={6}>
+                </div>
+                <div className='flex-1'>
                     <Lottie animationData={Globe} loop={true} />
-                </Grid>
-            </Grid>
+                </div>
+            </div>
         </div>
     )
 }

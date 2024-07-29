@@ -14,10 +14,10 @@ function TimeLine({ index, title, content, description, status, icon, percent })
             <h3 className="flex items-center mb-1 text-md md:text-lg font-semibold ">
                 {title}
                 {percent &&
-                    <span className="bg-pink-700 text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-3"
+                    <span className="bg-pink-700 text-white text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-3"
                     data-aos="fade-left" data-aos-duration="300" data-aos-delay="200">{percent}</span>}
                 {status &&
-                    <span className="bg-pink-700 text-xs md:text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-3"
+                    <span className="bg-pink-700 text-white text-xs md:text-sm font-medium me-2 px-2.5 py-0.5 rounded ms-3"
                     data-aos="fade-left" data-aos-duration="300" data-aos-delay="200">Latest</span>}
             </h3>
             <time className="block mb-2 text-xs md:text-sm font-normal leading-none text-gray-400">{content}</time>

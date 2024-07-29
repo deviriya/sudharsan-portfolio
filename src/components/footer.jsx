@@ -35,10 +35,10 @@ function Footer() {
                         <li className="flex items-start">
                             <MapPin size={20} className='mr-2' />1/52, Kounder street, kadayampatti, Sarrakkappillauyr, Omalur, Salem -636305</li>
                     </ul>
-                    <Button className='w-full my-4 items-center px-4 py-2 text-sm font-medium dark:text-white bg-pink-600 dark:bg-pink-600 border border-pink-600 rounded-md dark:hover:bg-[#0b0b0b] hover:bg-[#fff] dark:hover:text-pink-600 hover:text-pink-600 duration-300 
-                                focus:ring-0 focus:outline-none focus:ring-gray-100 focus:text-pink-600'>
+                    <a href="https://sudharsan-resume.tiiny.site/" target='_blank' 
+                    className='w-full inline-flex justify-center my-4 items-center px-4 py-2 text-sm font-medium text-white bg-pink-600 dark:bg-pink-600 border border-pink-600 rounded-md dark:hover:bg-[#0b0b0b] hover:bg-[#fff] dark:hover:text-pink-600 hover:text-pink-600 duration-300'>
                         <Download size={16} className='me-1' /> Download CV
-                    </Button>
+                    </a>
                 </Grid>
             </Grid>
 

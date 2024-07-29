@@ -1,15 +1,14 @@
 import { Grid } from '@mui/material'
 import React from 'react'
 import { BounceInDownButton } from '../animation/bounceIn'
-import profile from '../assets/profile2.png'
+import profile from '../assets/skill2c.png'
 
 function Aboutme() {
     return (
         <section>
-            <Grid container spacing={2} className='items-start'>
-                <Grid item md={6}>
-                    <img src={profile}
-                    className='img-fluid' />
+            <Grid container spacing={2} className='items-center'>
+                <Grid item md={6} className='flex justify-center w-full'>
+                    <img src={profile} className='img-fluid' alt='pic' />
                 </Grid>
                 <Grid item md={6}>
                     <p className='dark:text-white text-xs md:text-md opacity-60'>Get to know</p>
