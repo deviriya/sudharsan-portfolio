@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/hover-card"
 import knw from '../assets/light.png';
 import { Grid } from '@mui/material';
+import { Parallax } from 'react-scroll-parallax';
 
 function Knowledge() {
 
@@ -76,7 +77,9 @@ function Knowledge() {
                 </p>
                 <Grid container spacing={2}>
                     <Grid item md={2} className='hidden md:block'>
+                        <Parallax speed={10}>
                         <img src={knw} alt='kachan' />
+                        </Parallax>
                     </Grid>
                     <Grid item md={10}>
                         <div className='my-8 flex justify-center flex-wrap gap-4'>

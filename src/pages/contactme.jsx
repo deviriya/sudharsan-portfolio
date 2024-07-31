@@ -5,6 +5,7 @@ import { Mail, User } from 'lucide-react';
 import { Button } from '../components/ui/button'
 import Lottie from 'lottie-react';
 import Globe from '../animation/Globe.json';
+import { Parallax } from 'react-scroll-parallax';
 
 
 function Contactme() {
@@ -73,7 +74,9 @@ function Contactme() {
                     </form>
                 </div>
                 <div className='flex-1'>
-                    <Lottie animationData={Globe} loop={true} />
+                    <Parallax speed={10}>
+                        <Lottie animationData={Globe} loop={true} />
+                    </Parallax>
                 </div>
             </div>
         </div>

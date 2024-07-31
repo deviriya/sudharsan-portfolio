@@ -52,10 +52,10 @@ const MaterialUISwitch = styled(Switch)(() => ({
 
 function Header() {
     let defaultTheme = localStorage.getItem("prTtheme");
-    const [checked, setChecked] = useState(defaultTheme || false);
+    const [checked, setChecked] = useState(defaultTheme || true);
 
     useEffect(() => {
-        if (defaultTheme === "off") {
+        if (defaultTheme === "on") {
             setChecked(false);
             let theme = document.querySelector("body");
             theme.classList.remove("dark")
@@ -64,13 +64,13 @@ function Header() {
 
     const handleChange = (e) => {
         let theme = document.querySelector("body");
-        setChecked(defaultTheme === "off" ? false : true)
+        setChecked(defaultTheme === "on" ? false : true)
         localStorage.setItem('prTtheme', defaultTheme === "on" ? "off" : "on")
         theme.classList.toggle("dark")
     }
 
     return (
-        <navbar className='fixed z-10 backdrop-blur-sm py-4 flex justify-end container'>
+        <navbar className='fixed z-10 w-full backdrop-blur-sm p-4 flex justify-end'>
             <MaterialUISwitch onChange={handleChange} checked={checked} />
         </navbar>
     )

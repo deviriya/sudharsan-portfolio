@@ -1,14 +1,18 @@
 import { Grid } from '@mui/material'
 import React from 'react'
-import { BounceInDownButton } from '../animation/bounceIn'
+import { BounceInDownButton, Mirrorview } from '../animation/bounceIn'
 import profile from '../assets/skill2c.png'
+import { BackgroundBeams } from '../animation/BgBeans'
+import { Parallax } from 'react-scroll-parallax'
 
 function Aboutme() {
     return (
-        <section>
+        <Mirrorview className="relative">
             <Grid container spacing={2} className='items-center'>
                 <Grid item md={6} className='flex justify-center w-full'>
-                    <img src={profile} className='img-fluid' alt='pic' />
+                    <Parallax speed={10}>
+                        <img src={profile} className='img-fluid' alt='pic' />
+                    </Parallax>
                 </Grid>
                 <Grid item md={6}>
                     <p className='dark:text-white text-xs md:text-md opacity-60'>Get to know</p>
@@ -23,7 +27,8 @@ function Aboutme() {
                     </p>
                 </Grid>
             </Grid>
-        </section>
+            <BackgroundBeams />
+        </Mirrorview>
     )
 }
 
